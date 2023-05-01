@@ -57,7 +57,7 @@ const options = [
 
 export default function OthersGame() {
   return (
-    <div className="bg-dark/900 common-bdr p-3 d-flex flex-column gap-y-3">
+    <div className="bg-dark/900 common-bdr mt-4 mt-lg-0 p-3 d-flex flex-column gap-y-3">
       <div className="text-fade">
         <h4 className="text-xl">Currently Offline</h4>
         <p>Last Online 43 hrs, 44 minutes ago</p>

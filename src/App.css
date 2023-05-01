@@ -441,10 +441,11 @@ p {
 /* user info end  */
 /* Progress start */
 
-.progress-content h4,
-.progress-content .progress,
-.progress-content .passes {
-  flex: 1;
+.progress-content {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  gap: 10px;
 }
 
 .progress {
@@ -457,10 +458,40 @@ p {
   background-color: var(--green);
 }
 
+.basis-33 {
+  flex-basis: 33.33%;
+}
+
 /* progress end  */
 
 @media screen and (min-width: 992px) {
   .w-lg-75 {
     width: 75%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  /* user info start  */
+
+  .user-info {
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  /* user info end  */
+
+  .progress-content {
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: start;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  /* user info end  */
+
+  .progress-content {
+    grid-template-columns: repeat(1, 1fr);
+    justify-content: start;
   }
 }

@@ -70,7 +70,7 @@ if (PassItems?.length > 0 && PassItems?.length > 5) {
   const slicePass = PassItems.slice(0, 3);
   const extraPass = PassItems?.length - 3;
   content1 = (
-    <ul className="d-inline-flex justify-content-end  gap-x-2 passes">
+    <ul className="d-inline-flex justify-content-start justify-content-lg-end  gap-x-2 passes">
       {slicePass.map((pass) => {
         const { id, link, img } = pass || {};
         return (
@@ -89,6 +89,23 @@ if (PassItems?.length > 0 && PassItems?.length > 5) {
           {extraPass}+
         </Link>
       </li>
+    </ul>
+  );
+}
+
+if (PassItems?.length > 0 && PassItems?.length < 5) {
+  content1 = (
+    <ul className="d-inline-flex justify-content-start justify-content--lgend  gap-x-2 passes ">
+      {PassItems.map((pass) => {
+        const { id, link, img } = pass || {};
+        return (
+          <li className="" key={id}>
+            <Link to={link}>
+              <img src={img} alt="pass" className="w-24 h-24 object-cover" />
+            </Link>
+          </li>
+        );
+      })}
     </ul>
   );
 }

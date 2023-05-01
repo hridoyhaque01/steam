@@ -47,7 +47,7 @@ export default function Navbar() {
         <span className="navbar-toggler-icon"></span>
       </button>
       <div className="collapse navbar-collapse" id="navbarNav">
-        <ul className="navbar-nav text-uppercase gap-y-2 font-medium ms-lg-5 mt-5 mt-lg-0">
+        <ul className="navbar-nav text-uppercase gap-y-2 font-medium ms-lg-5 mt-3 mt-lg-0">
           {navbarItems.map((navItem) => {
             const { id, name, link } = navItem || {};
             return (
